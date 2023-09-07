@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Random Picker</title>
+    <style>
+       /* Style the background */
+.background-div {
+    background: linear-gradient(to bottom, #3498db, #e74c3c);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the centered div */
+.centered-div {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(218, 229, 229, 0.9); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style text and buttons inside the centered div */
+.centered-div h1 {
+    color: #3498db; /* Blue text */
+}
+
+.centered-div p {
+    color: #e74c3c; /* Red text */
+}
+
+.centered-div button {
+    background-color: #3498db; /* Blue button */
+    color: #fff; /* White text on the button */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.centered-div button:hover {
+    background-color: #e74c3c; /* Red button on hover */
+}
+
+    </style>
+</head>
+<body class="background-div">
+    <div class="container">
+        <div class="centered-div">
+            <h1>Random Candidate Picker</h1>
+    
+            <form id="candidateForm">
+                <label for="file">Upload Excel File:</label>
+                <input type="file" id="file" accept=".xlsx" required>
+                <button type="submit">Pick Random Candidate</button>
+            </form>
+        
+            <div id="result">
+                <!-- Selected candidate details will be displayed here -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
